@@ -1,0 +1,8 @@
+prefix=/home/haselab15/readrosbag/install
+
+Name: readbag
+Description: Description of readbag
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
