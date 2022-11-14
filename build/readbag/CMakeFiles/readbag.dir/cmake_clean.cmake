@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/haselab15/readrosbag/devel/lib/readbag/readbag"
-  "/home/haselab15/readrosbag/devel/lib/readbag/readbag.pdb"
+  "/home/shunsuke/readrosbag/devel/lib/readbag/readbag"
+  "/home/shunsuke/readrosbag/devel/lib/readbag/readbag.pdb"
   "CMakeFiles/readbag.dir/src/rosbagduration.cpp.o"
-  "CMakeFiles/readbag.dir/src/rosbagduration.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.
