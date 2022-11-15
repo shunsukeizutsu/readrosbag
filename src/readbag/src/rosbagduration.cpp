@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 {
 	rosbag::Bag bag;
 	
-	bag.open("/home/haselab15/turtle/2022-11-08-17-14-52.bag",rosbag::bagmode::Read);
+	bag.open("/home/shunsuke/turtlebag/2022-11-16-00-48-39.bag",rosbag::bagmode::Read);
 	
 	std::string rosout="/rosout";
 	std::string rosout_agg="/rosout_agg";
