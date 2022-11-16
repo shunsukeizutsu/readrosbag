@@ -50,4 +50,5 @@ readbag/CMakeFiles/readbag.dir/src/rosbagduration.cpp.o: /opt/ros/noetic/include
 readbag/CMakeFiles/readbag.dir/src/rosbagduration.cpp.o: /opt/ros/noetic/include/rosconsole/macros_generated.h
 readbag/CMakeFiles/readbag.dir/src/rosbagduration.cpp.o: /opt/ros/noetic/include/roslz4/lz4s.h
 readbag/CMakeFiles/readbag.dir/src/rosbagduration.cpp.o: /opt/ros/noetic/include/std_msgs/Int32.h
+readbag/CMakeFiles/readbag.dir/src/rosbagduration.cpp.o: /opt/ros/noetic/include/std_msgs/String.h
 

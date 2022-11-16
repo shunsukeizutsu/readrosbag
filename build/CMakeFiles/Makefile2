@@ -136,8 +136,10 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 # Directory level rules for directory readbag
 
 # Recursive "all" directory target.
+readbag/all: readbag/CMakeFiles/write.dir/all
 readbag/all: readbag/CMakeFiles/readbag.dir/all
 readbag/all: readbag/CMakeFiles/pra1.dir/all
+readbag/all: readbag/CMakeFiles/read.dir/all
 
 .PHONY : readbag/all
 
@@ -151,6 +153,8 @@ readbag/clean: readbag/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 readbag/clean: readbag/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 readbag/clean: readbag/CMakeFiles/topic_tools_generate_messages_cpp.dir/clean
 readbag/clean: readbag/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+readbag/clean: readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
+readbag/clean: readbag/CMakeFiles/write.dir/clean
 readbag/clean: readbag/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 readbag/clean: readbag/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 readbag/clean: readbag/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
@@ -165,15 +169,15 @@ readbag/clean: readbag/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 readbag/clean: readbag/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
 readbag/clean: readbag/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
 readbag/clean: readbag/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
+readbag/clean: readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+readbag/clean: readbag/CMakeFiles/std_srvs_generate_messages_py.dir/clean
 readbag/clean: readbag/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 readbag/clean: readbag/CMakeFiles/topic_tools_generate_messages_nodejs.dir/clean
 readbag/clean: readbag/CMakeFiles/roscpp_generate_messages_py.dir/clean
 readbag/clean: readbag/CMakeFiles/topic_tools_generate_messages_py.dir/clean
-readbag/clean: readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
 readbag/clean: readbag/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 readbag/clean: readbag/CMakeFiles/pra1.dir/clean
-readbag/clean: readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-readbag/clean: readbag/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+readbag/clean: readbag/CMakeFiles/read.dir/clean
 
 .PHONY : readbag/clean
 
@@ -530,6 +534,60 @@ readbag/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
 .PHONY : readbag/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
+# Target rules for target readbag/CMakeFiles/topic_tools_generate_messages_eus.dir
+
+# All Build rule for target.
+readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/all:
+	$(MAKE) -f readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/depend
+	$(MAKE) -f readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shunsuke/readrosbag/build/CMakeFiles --progress-num= "Built target topic_tools_generate_messages_eus"
+.PHONY : readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 0
+.PHONY : readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+topic_tools_generate_messages_eus: readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+
+.PHONY : topic_tools_generate_messages_eus
+
+# clean rule for target.
+readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/clean:
+	$(MAKE) -f readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
+.PHONY : readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target readbag/CMakeFiles/write.dir
+
+# All Build rule for target.
+readbag/CMakeFiles/write.dir/all:
+	$(MAKE) -f readbag/CMakeFiles/write.dir/build.make readbag/CMakeFiles/write.dir/depend
+	$(MAKE) -f readbag/CMakeFiles/write.dir/build.make readbag/CMakeFiles/write.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shunsuke/readrosbag/build/CMakeFiles --progress-num=15,16 "Built target write"
+.PHONY : readbag/CMakeFiles/write.dir/all
+
+# Build rule for subdir invocation for target.
+readbag/CMakeFiles/write.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/write.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 0
+.PHONY : readbag/CMakeFiles/write.dir/rule
+
+# Convenience name for target.
+write: readbag/CMakeFiles/write.dir/rule
+
+.PHONY : write
+
+# clean rule for target.
+readbag/CMakeFiles/write.dir/clean:
+	$(MAKE) -f readbag/CMakeFiles/write.dir/build.make readbag/CMakeFiles/write.dir/clean
+.PHONY : readbag/CMakeFiles/write.dir/clean
+
+#=============================================================================
 # Target rules for target readbag/CMakeFiles/roscpp_generate_messages_nodejs.dir
 
 # All Build rule for target.
@@ -617,7 +675,7 @@ readbag/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
 readbag/CMakeFiles/readbag.dir/all:
 	$(MAKE) -f readbag/CMakeFiles/readbag.dir/build.make readbag/CMakeFiles/readbag.dir/depend
 	$(MAKE) -f readbag/CMakeFiles/readbag.dir/build.make readbag/CMakeFiles/readbag.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shunsuke/readrosbag/build/CMakeFiles --progress-num=11,12 "Built target readbag"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shunsuke/readrosbag/build/CMakeFiles --progress-num=13,14 "Built target readbag"
 .PHONY : readbag/CMakeFiles/readbag.dir/all
 
 # Build rule for subdir invocation for target.
@@ -908,6 +966,60 @@ readbag/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean:
 .PHONY : readbag/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
+# Target rules for target readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shunsuke/readrosbag/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
+.PHONY : readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 0
+.PHONY : readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# clean rule for target.
+readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target readbag/CMakeFiles/std_srvs_generate_messages_py.dir
+
+# All Build rule for target.
+readbag/CMakeFiles/std_srvs_generate_messages_py.dir/all:
+	$(MAKE) -f readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build.make readbag/CMakeFiles/std_srvs_generate_messages_py.dir/depend
+	$(MAKE) -f readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build.make readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shunsuke/readrosbag/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_py"
+.PHONY : readbag/CMakeFiles/std_srvs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+readbag/CMakeFiles/std_srvs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/std_srvs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 0
+.PHONY : readbag/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_py: readbag/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+.PHONY : std_srvs_generate_messages_py
+
+# clean rule for target.
+readbag/CMakeFiles/std_srvs_generate_messages_py.dir/clean:
+	$(MAKE) -f readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build.make readbag/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+.PHONY : readbag/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+
+#=============================================================================
 # Target rules for target readbag/CMakeFiles/roscpp_generate_messages_eus.dir
 
 # All Build rule for target.
@@ -1016,33 +1128,6 @@ readbag/CMakeFiles/topic_tools_generate_messages_py.dir/clean:
 .PHONY : readbag/CMakeFiles/topic_tools_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target readbag/CMakeFiles/topic_tools_generate_messages_eus.dir
-
-# All Build rule for target.
-readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/all:
-	$(MAKE) -f readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/depend
-	$(MAKE) -f readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shunsuke/readrosbag/build/CMakeFiles --progress-num= "Built target topic_tools_generate_messages_eus"
-.PHONY : readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 0
-.PHONY : readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_eus: readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-
-.PHONY : topic_tools_generate_messages_eus
-
-# clean rule for target.
-readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/clean:
-	$(MAKE) -f readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
-.PHONY : readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
-
-#=============================================================================
 # Target rules for target readbag/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
@@ -1097,58 +1182,31 @@ readbag/CMakeFiles/pra1.dir/clean:
 .PHONY : readbag/CMakeFiles/pra1.dir/clean
 
 #=============================================================================
-# Target rules for target readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+# Target rules for target readbag/CMakeFiles/read.dir
 
 # All Build rule for target.
-readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shunsuke/readrosbag/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
-.PHONY : readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+readbag/CMakeFiles/read.dir/all:
+	$(MAKE) -f readbag/CMakeFiles/read.dir/build.make readbag/CMakeFiles/read.dir/depend
+	$(MAKE) -f readbag/CMakeFiles/read.dir/build.make readbag/CMakeFiles/read.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shunsuke/readrosbag/build/CMakeFiles --progress-num=11,12 "Built target read"
+.PHONY : readbag/CMakeFiles/read.dir/all
 
 # Build rule for subdir invocation for target.
-readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+readbag/CMakeFiles/read.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/read.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 0
-.PHONY : readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : readbag/CMakeFiles/read.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+read: readbag/CMakeFiles/read.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# clean rule for target.
-readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-.PHONY : readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target readbag/CMakeFiles/std_srvs_generate_messages_py.dir
-
-# All Build rule for target.
-readbag/CMakeFiles/std_srvs_generate_messages_py.dir/all:
-	$(MAKE) -f readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build.make readbag/CMakeFiles/std_srvs_generate_messages_py.dir/depend
-	$(MAKE) -f readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build.make readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shunsuke/readrosbag/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_py"
-.PHONY : readbag/CMakeFiles/std_srvs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-readbag/CMakeFiles/std_srvs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/std_srvs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shunsuke/readrosbag/build/CMakeFiles 0
-.PHONY : readbag/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_py: readbag/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-
-.PHONY : std_srvs_generate_messages_py
+.PHONY : read
 
 # clean rule for target.
-readbag/CMakeFiles/std_srvs_generate_messages_py.dir/clean:
-	$(MAKE) -f readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build.make readbag/CMakeFiles/std_srvs_generate_messages_py.dir/clean
-.PHONY : readbag/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+readbag/CMakeFiles/read.dir/clean:
+	$(MAKE) -f readbag/CMakeFiles/read.dir/build.make readbag/CMakeFiles/read.dir/clean
+.PHONY : readbag/CMakeFiles/read.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

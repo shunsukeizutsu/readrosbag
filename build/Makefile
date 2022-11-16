@@ -337,6 +337,32 @@ rosgraph_msgs_generate_messages_eus/fast:
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named topic_tools_generate_messages_eus
+
+# Build rule for target.
+topic_tools_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 topic_tools_generate_messages_eus
+.PHONY : topic_tools_generate_messages_eus
+
+# fast build rule for target.
+topic_tools_generate_messages_eus/fast:
+	$(MAKE) -f readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build
+.PHONY : topic_tools_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named write
+
+# Build rule for target.
+write: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 write
+.PHONY : write
+
+# fast build rule for target.
+write/fast:
+	$(MAKE) -f readbag/CMakeFiles/write.dir/build.make readbag/CMakeFiles/write.dir/build
+.PHONY : write/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_nodejs
 
 # Build rule for target.
@@ -519,6 +545,32 @@ std_srvs_generate_messages_nodejs/fast:
 .PHONY : std_srvs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named std_srvs_generate_messages_py
+
+# Build rule for target.
+std_srvs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_py
+.PHONY : std_srvs_generate_messages_py
+
+# fast build rule for target.
+std_srvs_generate_messages_py/fast:
+	$(MAKE) -f readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build.make readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_eus
 
 # Build rule for target.
@@ -571,19 +623,6 @@ topic_tools_generate_messages_py/fast:
 .PHONY : topic_tools_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named topic_tools_generate_messages_eus
-
-# Build rule for target.
-topic_tools_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 topic_tools_generate_messages_eus
-.PHONY : topic_tools_generate_messages_eus
-
-# fast build rule for target.
-topic_tools_generate_messages_eus/fast:
-	$(MAKE) -f readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build
-.PHONY : topic_tools_generate_messages_eus/fast
-
-#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -610,30 +649,17 @@ pra1/fast:
 .PHONY : pra1/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+# Target rules for targets named read
 
 # Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
+read: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 read
+.PHONY : read
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named std_srvs_generate_messages_py
-
-# Build rule for target.
-std_srvs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_py
-.PHONY : std_srvs_generate_messages_py
-
-# fast build rule for target.
-std_srvs_generate_messages_py/fast:
-	$(MAKE) -f readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build.make readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build
-.PHONY : std_srvs_generate_messages_py/fast
+read/fast:
+	$(MAKE) -f readbag/CMakeFiles/read.dir/build.make readbag/CMakeFiles/read.dir/build
+.PHONY : read/fast
 
 # Help Target
 help:
@@ -661,6 +687,8 @@ help:
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... topic_tools_generate_messages_eus"
+	@echo "... write"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
@@ -675,15 +703,15 @@ help:
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_nodejs"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... std_srvs_generate_messages_py"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... topic_tools_generate_messages_py"
-	@echo "... topic_tools_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... pra1"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... std_srvs_generate_messages_py"
+	@echo "... read"
 .PHONY : help
 
 

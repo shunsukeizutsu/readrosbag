@@ -102,17 +102,6 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -134,6 +123,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -226,6 +226,36 @@ rosgraph_msgs_generate_messages_eus: readbag/CMakeFiles/rosgraph_msgs_generate_m
 rosgraph_msgs_generate_messages_eus/fast:
 	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make readbag/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/rule:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+.PHONY : readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+topic_tools_generate_messages_eus: readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+
+.PHONY : topic_tools_generate_messages_eus
+
+# fast build rule for target.
+topic_tools_generate_messages_eus/fast:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build
+.PHONY : topic_tools_generate_messages_eus/fast
+
+# Convenience name for target.
+readbag/CMakeFiles/write.dir/rule:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/write.dir/rule
+.PHONY : readbag/CMakeFiles/write.dir/rule
+
+# Convenience name for target.
+write: readbag/CMakeFiles/write.dir/rule
+
+.PHONY : write
+
+# fast build rule for target.
+write/fast:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/write.dir/build.make readbag/CMakeFiles/write.dir/build
+.PHONY : write/fast
 
 # Convenience name for target.
 readbag/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
@@ -438,6 +468,36 @@ std_srvs_generate_messages_nodejs/fast:
 .PHONY : std_srvs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+readbag/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+.PHONY : readbag/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_py: readbag/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+.PHONY : std_srvs_generate_messages_py
+
+# fast build rule for target.
+std_srvs_generate_messages_py/fast:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build.make readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
+
+# Convenience name for target.
 readbag/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
 	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 .PHONY : readbag/CMakeFiles/roscpp_generate_messages_eus.dir/rule
@@ -498,21 +558,6 @@ topic_tools_generate_messages_py/fast:
 .PHONY : topic_tools_generate_messages_py/fast
 
 # Convenience name for target.
-readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/rule:
-	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-.PHONY : readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_eus: readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-
-.PHONY : topic_tools_generate_messages_eus
-
-# fast build rule for target.
-topic_tools_generate_messages_eus/fast:
-	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make readbag/CMakeFiles/topic_tools_generate_messages_eus.dir/build
-.PHONY : topic_tools_generate_messages_eus/fast
-
-# Convenience name for target.
 readbag/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
 	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : readbag/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
@@ -543,34 +588,46 @@ pra1/fast:
 .PHONY : pra1/fast
 
 # Convenience name for target.
-readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+readbag/CMakeFiles/read.dir/rule:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/read.dir/rule
+.PHONY : readbag/CMakeFiles/read.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+read: readbag/CMakeFiles/read.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_cpp
+.PHONY : read
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make readbag/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+read/fast:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/read.dir/build.make readbag/CMakeFiles/read.dir/build
+.PHONY : read/fast
 
-# Convenience name for target.
-readbag/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
-	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-.PHONY : readbag/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+src/read.o: src/read.cpp.o
 
-# Convenience name for target.
-std_srvs_generate_messages_py: readbag/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+.PHONY : src/read.o
 
-.PHONY : std_srvs_generate_messages_py
+# target to build an object file
+src/read.cpp.o:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/read.dir/build.make readbag/CMakeFiles/read.dir/src/read.cpp.o
+.PHONY : src/read.cpp.o
 
-# fast build rule for target.
-std_srvs_generate_messages_py/fast:
-	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build.make readbag/CMakeFiles/std_srvs_generate_messages_py.dir/build
-.PHONY : std_srvs_generate_messages_py/fast
+src/read.i: src/read.cpp.i
+
+.PHONY : src/read.i
+
+# target to preprocess a source file
+src/read.cpp.i:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/read.dir/build.make readbag/CMakeFiles/read.dir/src/read.cpp.i
+.PHONY : src/read.cpp.i
+
+src/read.s: src/read.cpp.s
+
+.PHONY : src/read.s
+
+# target to generate assembly for a file
+src/read.cpp.s:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/read.dir/build.make readbag/CMakeFiles/read.dir/src/read.cpp.s
+.PHONY : src/read.cpp.s
 
 src/rosbagduration.o: src/rosbagduration.cpp.o
 
@@ -626,6 +683,33 @@ src/test.cpp.s:
 	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/pra1.dir/build.make readbag/CMakeFiles/pra1.dir/src/test.cpp.s
 .PHONY : src/test.cpp.s
 
+src/writebag.o: src/writebag.cpp.o
+
+.PHONY : src/writebag.o
+
+# target to build an object file
+src/writebag.cpp.o:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/write.dir/build.make readbag/CMakeFiles/write.dir/src/writebag.cpp.o
+.PHONY : src/writebag.cpp.o
+
+src/writebag.i: src/writebag.cpp.i
+
+.PHONY : src/writebag.i
+
+# target to preprocess a source file
+src/writebag.cpp.i:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/write.dir/build.make readbag/CMakeFiles/write.dir/src/writebag.cpp.i
+.PHONY : src/writebag.cpp.i
+
+src/writebag.s: src/writebag.cpp.s
+
+.PHONY : src/writebag.s
+
+# target to generate assembly for a file
+src/writebag.cpp.s:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/write.dir/build.make readbag/CMakeFiles/write.dir/src/writebag.cpp.s
+.PHONY : src/writebag.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -640,6 +724,9 @@ help:
 	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... install/local"
 	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... edit_cache"
+	@echo "... topic_tools_generate_messages_eus"
+	@echo "... write"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
@@ -654,24 +741,29 @@ help:
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_nodejs"
+	@echo "... test"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... std_srvs_generate_messages_py"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... topic_tools_generate_messages_py"
-	@echo "... topic_tools_generate_messages_eus"
-	@echo "... edit_cache"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... pra1"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... std_srvs_generate_messages_py"
-	@echo "... test"
+	@echo "... read"
+	@echo "... src/read.o"
+	@echo "... src/read.i"
+	@echo "... src/read.s"
 	@echo "... src/rosbagduration.o"
 	@echo "... src/rosbagduration.i"
 	@echo "... src/rosbagduration.s"
 	@echo "... src/test.o"
 	@echo "... src/test.i"
 	@echo "... src/test.s"
+	@echo "... src/writebag.o"
+	@echo "... src/writebag.i"
+	@echo "... src/writebag.s"
 .PHONY : help
 
 

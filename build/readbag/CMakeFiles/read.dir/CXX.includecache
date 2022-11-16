@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/shunsuke/readrosbag/src/readbag/src/rosbagduration.cpp
-iostream
--
-ros/time.h
--
+/home/shunsuke/readrosbag/src/readbag/src/read.cpp
 rosbag/bag.h
 -
 rosbag/view.h
@@ -19,15 +15,7 @@ std_msgs/Int32.h
 -
 std_msgs/String.h
 -
-rosbag/bag.h
--
-rosbag/query.h
--
-rosbag/message_instance.h
--
 boost/foreach.hpp
--
-vector
 -
 
 /opt/ros/noetic/include/class_loader/class_loader.hpp

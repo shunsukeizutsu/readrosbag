@@ -211,3 +211,9 @@ target_link_libraries(readbag ${catkin_LIBRARIES})
 
 add_executable(pra1 src/test.cpp)
 target_link_libraries(pra1 ${catkin_LIBRARIES})
+
+add_executable(write src/writebag.cpp)
+target_link_libraries(write ${catkin_LIBRARIES})
+
+add_executable(read src/read.cpp)
+target_link_libraries(read ${catkin_LIBRARIES})
