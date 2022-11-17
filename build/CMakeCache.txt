@@ -449,6 +449,9 @@ readbag_BINARY_DIR:STATIC=/home/shunsuke/readrosbag/build/readbag
 //Value Computed by CMake
 readbag_SOURCE_DIR:STATIC=/home/shunsuke/readrosbag/src/readbag
 
+//The directory containing a CMake configuration file for ros.
+ros_DIR:PATH=ros_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for rosbag.
 rosbag_DIR:PATH=/opt/ros/noetic/share/rosbag/cmake
 

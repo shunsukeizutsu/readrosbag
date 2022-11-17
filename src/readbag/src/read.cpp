@@ -19,6 +19,7 @@ int main()
 
     foreach(rosbag::MessageInstance const m,view)
     {
+        std::cout << 1 << std::endl;
         std_msgs::String::ConstPtr s = m.instantiate<std_msgs::String>();
         if(s != NULL)
             std::cout << s->data << std::endl;

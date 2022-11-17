@@ -1,6 +1,7 @@
 #include <rosbag/bag.h>
 #include <std_msgs/Int32.h>
 #include <std_msgs/String.h>
+#include <ros/time.h>
 
 int main()
 {
@@ -11,11 +12,11 @@ int main()
     std_msgs::String str;
     str.data=std::string("foo");
 
-    std_msgs::Int32 i;
-    i.data = 42;
+    //std_msgs::Int32 i;
+    //i.data = 42;
 
     bag.write("chatter",ros::Time::now(), str);
-    bag.write("numbers",ros::Time::now(), i);
+    //bag.write("numbers",ros::Time::now(), i);
 
     bag.close();
 
