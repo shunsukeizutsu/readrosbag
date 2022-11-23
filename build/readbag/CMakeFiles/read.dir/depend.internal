@@ -90,6 +90,8 @@ readbag/CMakeFiles/read.dir/src/read.cpp.o
  /opt/ros/noetic/include/rosconsole/macros_generated.h
  /opt/ros/noetic/include/roslz4/lz4s.h
  /opt/ros/noetic/include/sensor_msgs/Imu.h
+ /opt/ros/noetic/include/sensor_msgs/NavSatFix.h
+ /opt/ros/noetic/include/sensor_msgs/NavSatStatus.h
  /opt/ros/noetic/include/std_msgs/Header.h
  /opt/ros/noetic/include/std_msgs/String.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h

@@ -5,6 +5,7 @@
 #include "std_msgs/String.h"
 #include <boost/foreach.hpp>
 #include "sensor_msgs/Imu.h"
+#include "sensor_msgs/NavSatFix.h"
 
 int main()
 {
@@ -24,24 +25,42 @@ int main()
 
     BOOST_FOREACH(rosbag::MessageInstance const m,view)
     {
-        /*if(m.getTopic() == fix)
+//        std::cout << m.getTopic() << std::endl;
+        if(m.getTopic() == fix)
         {
-            std::cout << "accord" << std::endl;
+            sensor_msgs::NavSatFix::ConstPtr msg = m.instantiate<sensor_msgs::NavSatFix>();
+            std::cout << msg->header.stamp << " ";
+            std::cout << msg->header.frame_id << " ";
+            std::cout << msg->status.status << " ";
+            std::cout << msg->status.service << " ";
+            std::cout << msg->latitude << " ";
+            std::cout << msg->longitude << " ";
+            std::cout << msg->position_covariance[0] << " ";
+            std::cout << msg->position_covariance[1] << " ";
+            std::cout << msg->position_covariance[2] << " ";
+            std::cout << msg->position_covariance[3] << " ";
+            std::cout << msg->position_covariance[4] << " ";
+            std::cout << msg->position_covariance[5] << " ";
+            std::cout << msg->position_covariance[6] << " ";
+            std::cout << msg->position_covariance[7] << " ";
+            std::cout << msg->position_covariance[8] << " ";
+            std::cout << msg->position_covariance_type << std::endl;
+
         }
-        if(m.getTopic() == velodyne)
+/*        if(m.getTopic() == velodyne)
         {
             std::cout << "accord_vel" << std::endl;
         }*/
-        if(m.getTopic() == imu)
+/*        if(m.getTopic() == imu)
         {
- //           std::cout << "accord_imu" << std::endl;
- //           std_msgs::String::ConstPtr msg = m.instantiate<std_msgs::String>();
- //           std::cout << msg->data << std::endl;
+
             sensor_msgs::Imu::ConstPtr msg = m.instantiate<sensor_msgs::Imu>();
             std::cout << msg->linear_acceleration.x;
             std::cout << msg->linear_acceleration.y;
             std::cout << msg->linear_acceleration.z << std::endl;
+            std::cout << m.getTopic() << std::endl;
         }
+*/
     }
 
     bag.close();

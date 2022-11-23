@@ -89,6 +89,8 @@ readbag/CMakeFiles/read.dir/src/read.cpp.o: /opt/ros/noetic/include/rosbag/view.
 readbag/CMakeFiles/read.dir/src/read.cpp.o: /opt/ros/noetic/include/rosconsole/macros_generated.h
 readbag/CMakeFiles/read.dir/src/read.cpp.o: /opt/ros/noetic/include/roslz4/lz4s.h
 readbag/CMakeFiles/read.dir/src/read.cpp.o: /opt/ros/noetic/include/sensor_msgs/Imu.h
+readbag/CMakeFiles/read.dir/src/read.cpp.o: /opt/ros/noetic/include/sensor_msgs/NavSatFix.h
+readbag/CMakeFiles/read.dir/src/read.cpp.o: /opt/ros/noetic/include/sensor_msgs/NavSatStatus.h
 readbag/CMakeFiles/read.dir/src/read.cpp.o: /opt/ros/noetic/include/std_msgs/Header.h
 readbag/CMakeFiles/read.dir/src/read.cpp.o: /opt/ros/noetic/include/std_msgs/String.h
 readbag/CMakeFiles/read.dir/src/read.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
