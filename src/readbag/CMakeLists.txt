@@ -8,10 +8,10 @@ project(readbag)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  rosbag
   roscpp
   rospy
   std_msgs
-  rosbag
 )
 
 ## System dependencies are found with CMake's conventions
@@ -106,7 +106,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES readbag
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+#  CATKIN_DEPENDS rosbag roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 
@@ -206,14 +206,5 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-#add_executable(readbag src/rosbagduration.cpp)
-#target_link_libraries(readbag ${catkin_LIBRARIES})
-
-#add_executable(pra1 src/test.cpp)
-#target_link_libraries(pra1 ${catkin_LIBRARIES})
-
-add_executable(write src/writebag.cpp)
-target_link_libraries(write ${catkin_LIBRARIES})
-
-#add_executable(read src/read.cpp)
-#target_link_libraries(read ${catkin_LIBRARIES})
+add_executable(read src/read.cpp)
+target_link_libraries(read ${catkin_LIBRARIES})

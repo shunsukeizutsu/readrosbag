@@ -44,7 +44,7 @@ int main(int argc, char **argv)
 		if(m.getTopic() == fix || ("/" + m.getTopic() == fix))
 		{
 //			std::cout << m.getTopic() << std::endl;
-			std::cout << s->data << std::endl;
+//			std::cout << s->data << std::endl;
 		}
 /*
 		if(m.getTopic() == fix || ("/" + m.getTopic() == fix))
