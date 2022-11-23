@@ -2,4 +2,4 @@
 source_root_dir = '/home/shunsuke/readrosbag/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/home/shunsuke/practice_ros/devel;/opt/ros/noetic'.split(';') if '/home/shunsuke/practice_ros/devel;/opt/ros/noetic' != '' else []
+underlay_workspaces = '/home/shunsuke/readrosbag/devel;/home/shunsuke/practice_ros/devel;/opt/ros/noetic'.split(';') if '/home/shunsuke/readrosbag/devel;/home/shunsuke/practice_ros/devel;/opt/ros/noetic' != '' else []

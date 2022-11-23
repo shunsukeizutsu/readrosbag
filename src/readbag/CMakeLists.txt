@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  sensor_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -208,3 +209,5 @@ include_directories(
 
 add_executable(read src/read.cpp)
 target_link_libraries(read ${catkin_LIBRARIES})
+add_executable(read_vel src/read_velodyne.cpp)
+target_link_libraries(read_vel ${catkin_LIBRARIES})
