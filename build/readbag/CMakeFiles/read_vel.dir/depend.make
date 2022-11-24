@@ -90,6 +90,8 @@ readbag/CMakeFiles/read_vel.dir/src/read_velodyne.cpp.o: /opt/ros/noetic/include
 readbag/CMakeFiles/read_vel.dir/src/read_velodyne.cpp.o: /opt/ros/noetic/include/sensor_msgs/PointField.h
 readbag/CMakeFiles/read_vel.dir/src/read_velodyne.cpp.o: /opt/ros/noetic/include/std_msgs/Header.h
 readbag/CMakeFiles/read_vel.dir/src/read_velodyne.cpp.o: /opt/ros/noetic/include/std_msgs/String.h
+readbag/CMakeFiles/read_vel.dir/src/read_velodyne.cpp.o: /opt/ros/noetic/include/velodyne_msgs/VelodynePacket.h
+readbag/CMakeFiles/read_vel.dir/src/read_velodyne.cpp.o: /opt/ros/noetic/include/velodyne_msgs/VelodyneScan.h
 readbag/CMakeFiles/read_vel.dir/src/read_velodyne.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 readbag/CMakeFiles/read_vel.dir/src/read_velodyne.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
 

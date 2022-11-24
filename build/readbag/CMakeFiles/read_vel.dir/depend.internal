@@ -91,5 +91,7 @@ readbag/CMakeFiles/read_vel.dir/src/read_velodyne.cpp.o
  /opt/ros/noetic/include/sensor_msgs/PointField.h
  /opt/ros/noetic/include/std_msgs/Header.h
  /opt/ros/noetic/include/std_msgs/String.h
+ /opt/ros/noetic/include/velodyne_msgs/VelodynePacket.h
+ /opt/ros/noetic/include/velodyne_msgs/VelodyneScan.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h

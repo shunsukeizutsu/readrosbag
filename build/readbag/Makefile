@@ -183,6 +183,51 @@ read/fast:
 .PHONY : read/fast
 
 # Convenience name for target.
+readbag/CMakeFiles/velodyne_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/velodyne_msgs_generate_messages_nodejs.dir/rule
+.PHONY : readbag/CMakeFiles/velodyne_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+velodyne_msgs_generate_messages_nodejs: readbag/CMakeFiles/velodyne_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : velodyne_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+velodyne_msgs_generate_messages_nodejs/fast:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/velodyne_msgs_generate_messages_nodejs.dir/build.make readbag/CMakeFiles/velodyne_msgs_generate_messages_nodejs.dir/build
+.PHONY : velodyne_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+readbag/CMakeFiles/velodyne_msgs_generate_messages_lisp.dir/rule:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/velodyne_msgs_generate_messages_lisp.dir/rule
+.PHONY : readbag/CMakeFiles/velodyne_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+velodyne_msgs_generate_messages_lisp: readbag/CMakeFiles/velodyne_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : velodyne_msgs_generate_messages_lisp
+
+# fast build rule for target.
+velodyne_msgs_generate_messages_lisp/fast:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/velodyne_msgs_generate_messages_lisp.dir/build.make readbag/CMakeFiles/velodyne_msgs_generate_messages_lisp.dir/build
+.PHONY : velodyne_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+readbag/CMakeFiles/velodyne_msgs_generate_messages_cpp.dir/rule:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/velodyne_msgs_generate_messages_cpp.dir/rule
+.PHONY : readbag/CMakeFiles/velodyne_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+velodyne_msgs_generate_messages_cpp: readbag/CMakeFiles/velodyne_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : velodyne_msgs_generate_messages_cpp
+
+# fast build rule for target.
+velodyne_msgs_generate_messages_cpp/fast:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/velodyne_msgs_generate_messages_cpp.dir/build.make readbag/CMakeFiles/velodyne_msgs_generate_messages_cpp.dir/build
+.PHONY : velodyne_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
 readbag/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 .PHONY : readbag/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
@@ -378,6 +423,21 @@ roscpp_generate_messages_nodejs/fast:
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
+readbag/CMakeFiles/velodyne_msgs_generate_messages_py.dir/rule:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/velodyne_msgs_generate_messages_py.dir/rule
+.PHONY : readbag/CMakeFiles/velodyne_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+velodyne_msgs_generate_messages_py: readbag/CMakeFiles/velodyne_msgs_generate_messages_py.dir/rule
+
+.PHONY : velodyne_msgs_generate_messages_py
+
+# fast build rule for target.
+velodyne_msgs_generate_messages_py/fast:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/velodyne_msgs_generate_messages_py.dir/build.make readbag/CMakeFiles/velodyne_msgs_generate_messages_py.dir/build
+.PHONY : velodyne_msgs_generate_messages_py/fast
+
+# Convenience name for target.
 readbag/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
 	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 .PHONY : readbag/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
@@ -391,6 +451,21 @@ std_msgs_generate_messages_eus: readbag/CMakeFiles/std_msgs_generate_messages_eu
 std_msgs_generate_messages_eus/fast:
 	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make readbag/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+readbag/CMakeFiles/velodyne_msgs_generate_messages_eus.dir/rule:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f CMakeFiles/Makefile2 readbag/CMakeFiles/velodyne_msgs_generate_messages_eus.dir/rule
+.PHONY : readbag/CMakeFiles/velodyne_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+velodyne_msgs_generate_messages_eus: readbag/CMakeFiles/velodyne_msgs_generate_messages_eus.dir/rule
+
+.PHONY : velodyne_msgs_generate_messages_eus
+
+# fast build rule for target.
+velodyne_msgs_generate_messages_eus/fast:
+	cd /home/shunsuke/readrosbag/build && $(MAKE) -f readbag/CMakeFiles/velodyne_msgs_generate_messages_eus.dir/build.make readbag/CMakeFiles/velodyne_msgs_generate_messages_eus.dir/build
+.PHONY : velodyne_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 readbag/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
@@ -786,6 +861,9 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... read"
+	@echo "... velodyne_msgs_generate_messages_nodejs"
+	@echo "... velodyne_msgs_generate_messages_lisp"
+	@echo "... velodyne_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_cpp"
@@ -801,7 +879,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... topic_tools_generate_messages_eus"
 	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... velodyne_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_eus"
+	@echo "... velodyne_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_lisp"
