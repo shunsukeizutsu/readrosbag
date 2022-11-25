@@ -11,7 +11,7 @@
 int main()
 {
    rosbag::Bag bag;
-    bag.open("/home/shunsuke/rosbag/2022-08-19-16-07-21.bag", rosbag::bagmode::Read);
+    bag.open("/home/haselab15/rosbag/2022-08-19-16-07-21.bag", rosbag::bagmode::Read);
 
     std::string velodyne = "/velodyne_points";
 
@@ -27,7 +27,7 @@ int main()
             sensor_msgs::PointCloud2::ConstPtr msg = m.instantiate<sensor_msgs::PointCloud2>();
             //std::cout << msg->fields[0].name << " ";
             //std::cout << msg->width << " ";
-            /*for (size_t i = 0; i < msg->fields.size(); i++)
+            for (size_t i = 0; i < msg->fields.size(); i++)
             {
               if (msg->fields[i].datatype == sensor_msgs::PointField::FLOAT32)
               {
@@ -39,11 +39,12 @@ int main()
               {
                 std::cout << msg->fields[i].datatype << msg->fields[i].name << std::endl;
               }   
-            }*/
+            }
             //velodyne_msgs::VelodynePacket tmp = m.instantiate<velodyne_msgs::VelodynePacket>();
-            velodyne_msgs::VelodynePacket tmp;
-
-          std::cout << *((u_int16_t*)(&tmp.data[0])) << " ";
+            //velodyne_msgs::VelodyneScan scan;
+          //std::cout << scan.packets << std::endl;
+        
+        /*std::cout << *((u_int16_t*)(&msg.data[0])) << " ";
           std::cout << *((u_int16_t*)(&tmp.data[1])) << " ";
           std::cout << *((u_int16_t*)(&tmp.data[2])) << " ";
           std::cout << *((u_int16_t*)(&tmp.data[3])) << " ";
@@ -53,7 +54,7 @@ int main()
           std::cout << *((u_int16_t*)(&tmp.data[7])) << " ";
           std::cout << *((u_int16_t*)(&tmp.data[8])) << " ";
           std::cout << *((u_int16_t*)(&tmp.data[9])) << std::endl;
-      
+        */
 
 
         }

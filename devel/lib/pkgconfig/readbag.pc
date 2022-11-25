@@ -1,4 +1,4 @@
-prefix=/home/shunsuke/readrosbag/devel
+prefix=/home/haselab15/readrosbag/devel
 
 Name: readbag
 Description: Description of readbag

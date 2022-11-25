@@ -6,11 +6,15 @@
 #include <boost/foreach.hpp>
 #include "sensor_msgs/Imu.h"
 #include "sensor_msgs/NavSatFix.h"
+#include "sensor_msgs/NavSatStatus.h"
+#include <stdint.h>
+#include <stdio.h>
+#include <cstdint>
 
 int main()
 {
     rosbag::Bag bag;
-    bag.open("/home/shunsuke/rosbag/2022-08-19-16-07-21.bag", rosbag::bagmode::Read);
+    bag.open("/home/haselab15/rosbag/2022-08-19-16-07-21.bag", rosbag::bagmode::Read);
 
     std::string fix = "/fix";
     std::string velodyne = "/velodyne_points";
@@ -29,12 +33,16 @@ int main()
         if(m.getTopic() == fix)
         {
             sensor_msgs::NavSatFix::ConstPtr msg = m.instantiate<sensor_msgs::NavSatFix>();
+            sensor_msgs::NavSatStatus::ConstPtr msg2 = m.instantiate<sensor_msgs::NavSatStatus>();
+            std::cout << msg->header.seq << " ";
             std::cout << msg->header.stamp << " ";
             std::cout << msg->header.frame_id << " ";
-            std::cout << msg->status.status << " ";
+//            printf("%d\n",msg2->status);
+//              std::cout << msg2->status << " ";
             std::cout << msg->status.service << " ";
             std::cout << msg->latitude << " ";
             std::cout << msg->longitude << " ";
+            std::cout << msg->altitude << " ";
             std::cout << msg->position_covariance[0] << " ";
             std::cout << msg->position_covariance[1] << " ";
             std::cout << msg->position_covariance[2] << " ";
@@ -43,8 +51,8 @@ int main()
             std::cout << msg->position_covariance[5] << " ";
             std::cout << msg->position_covariance[6] << " ";
             std::cout << msg->position_covariance[7] << " ";
-            std::cout << msg->position_covariance[8] << " ";
-            std::cout << msg->position_covariance_type << std::endl;
+            std::cout << msg->position_covariance[8] << std::endl;
+            //std::cout << msg->(uint8_t)position_covariance_type << std::endl;////////出力できていない
 
         }
 /*        if(m.getTopic() == velodyne)
