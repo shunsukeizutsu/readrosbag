@@ -209,7 +209,9 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(read src/read.cpp)
-target_link_libraries(read ${catkin_LIBRARIES})
+add_executable(read_gnss src/read_gnss.cpp)
+target_link_libraries(read_gnss ${catkin_LIBRARIES})
 add_executable(read_vel src/read_velodyne.cpp)
 target_link_libraries(read_vel ${catkin_LIBRARIES})
+add_executable(read_imu src/read_imu.cpp)
+target_link_libraries(read_imu ${catkin_LIBRARIES})

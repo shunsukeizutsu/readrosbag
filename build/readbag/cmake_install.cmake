@@ -1,8 +1,8 @@
-# Install script for directory: /home/haselab15/readrosbag/src/readbag
+# Install script for directory: /home/shunsuke/readrosbag/src/readbag
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/haselab15/readrosbag/install")
+  set(CMAKE_INSTALL_PREFIX "/home/shunsuke/readrosbag/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -37,23 +37,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
-endif()
-
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/haselab15/readrosbag/build/readbag/catkin_generated/installspace/readbag.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/shunsuke/readrosbag/build/readbag/catkin_generated/installspace/readbag.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/readbag/cmake" TYPE FILE FILES
-    "/home/haselab15/readrosbag/build/readbag/catkin_generated/installspace/readbagConfig.cmake"
-    "/home/haselab15/readrosbag/build/readbag/catkin_generated/installspace/readbagConfig-version.cmake"
+    "/home/shunsuke/readrosbag/build/readbag/catkin_generated/installspace/readbagConfig.cmake"
+    "/home/shunsuke/readrosbag/build/readbag/catkin_generated/installspace/readbagConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/readbag" TYPE FILE FILES "/home/haselab15/readrosbag/src/readbag/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/readbag" TYPE FILE FILES "/home/shunsuke/readrosbag/src/readbag/package.xml")
 endif()
 

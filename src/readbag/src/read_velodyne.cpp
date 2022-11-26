@@ -11,7 +11,7 @@
 int main()
 {
    rosbag::Bag bag;
-    bag.open("/home/haselab15/rosbag/2022-08-19-16-07-21.bag", rosbag::bagmode::Read);
+    bag.open("/home/shunsuke/rosbag/2022-08-19-16-41-28.bag", rosbag::bagmode::Read);
 
     std::string velodyne = "/velodyne_points";
 
@@ -25,38 +25,45 @@ int main()
         if(m.getTopic() == velodyne)
         {
             sensor_msgs::PointCloud2::ConstPtr msg = m.instantiate<sensor_msgs::PointCloud2>();
-            //std::cout << msg->fields[0].name << " ";
-            //std::cout << msg->width << " ";
+            
+            std::cout << msg->header.seq << " ";
+            std::cout << msg->header.stamp << " ";
+            std::cout << msg->header.frame_id << " ";
+            std::cout << msg->height << " ";
+            std::cout << msg->width << " ";
+    
             for (size_t i = 0; i < msg->fields.size(); i++)
             {
               if (msg->fields[i].datatype == sensor_msgs::PointField::FLOAT32)
               {
-                std::cout << msg->fields[i].name << msg->fields[i].offset << msg->fields[i].datatype << " ";
-                
-          
+                std::cout << msg->fields[i].name << " ";
+                std::cout << msg->fields[i].offset << " ";
+                std::cout << (uint)msg->fields[i].datatype << " ";            
+                std::cout << msg->fields[i].count << " ";             
               }
               else if (msg->fields[i].datatype == sensor_msgs::PointField::UINT16)
               {
-                std::cout << msg->fields[i].datatype << msg->fields[i].name << std::endl;
-              }   
+                std::cout << msg->fields[i].name << " ";
+                std::cout << msg->fields[i].offset << " ";
+                std::cout << (uint)msg->fields[i].datatype << " ";
+                std::cout << msg->fields[i].count << " ";
+              }
             }
-            //velodyne_msgs::VelodynePacket tmp = m.instantiate<velodyne_msgs::VelodynePacket>();
-            //velodyne_msgs::VelodyneScan scan;
-          //std::cout << scan.packets << std::endl;
-        
-        /*std::cout << *((u_int16_t*)(&msg.data[0])) << " ";
-          std::cout << *((u_int16_t*)(&tmp.data[1])) << " ";
-          std::cout << *((u_int16_t*)(&tmp.data[2])) << " ";
-          std::cout << *((u_int16_t*)(&tmp.data[3])) << " ";
-          std::cout << *((u_int16_t*)(&tmp.data[4])) << " ";
-          std::cout << *((u_int16_t*)(&tmp.data[5])) << " ";
-          std::cout << *((u_int16_t*)(&tmp.data[6])) << " ";
-          std::cout << *((u_int16_t*)(&tmp.data[7])) << " ";
-          std::cout << *((u_int16_t*)(&tmp.data[8])) << " ";
-          std::cout << *((u_int16_t*)(&tmp.data[9])) << std::endl;
-        */
-
-
+            std::cout << (bool)msg->is_bigendian << " ";
+            std::cout << msg->point_step << " ";
+            std::cout << msg->row_step << " ";
+            //data[1206]
+            for(int i=0;i<1206;i++)
+            {
+              if(i!=1205)
+              {
+                std::cout << (uint)msg->data[i] << " ";
+              }
+              else
+              {
+                std::cout << (uint)msg->data[i] << std::endl;
+              }  
+            }
         }
     }
 
