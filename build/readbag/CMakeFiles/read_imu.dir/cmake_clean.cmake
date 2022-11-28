@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/shunsuke/readrosbag/devel/lib/readbag/read_imu"
-  "/home/shunsuke/readrosbag/devel/lib/readbag/read_imu.pdb"
+  "/home/haselab15/readrosbag/devel/lib/readbag/read_imu"
+  "/home/haselab15/readrosbag/devel/lib/readbag/read_imu.pdb"
   "CMakeFiles/read_imu.dir/src/read_imu.cpp.o"
+  "CMakeFiles/read_imu.dir/src/read_imu.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

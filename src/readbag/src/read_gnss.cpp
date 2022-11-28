@@ -14,35 +14,40 @@
 int main()
 {
     rosbag::Bag bag;
-    bag.open("/home/shunsuke/rosbag/2022-08-19-16-07-21.bag", rosbag::bagmode::Read);
+    bag.open("/home/haselab15/rosbag/2022-08-19-16-24-42.bag", rosbag::bagmode::Read);
 
     std::string fix = "/fix";
 
-    std::vector<std::string>topics;
+    std::vector<std::string> topics;
     topics.push_back(std::string(fix));
 
     rosbag::View view(bag, rosbag::TopicQuery(topics));
 
-    std::cout << "field.header.seq,field.header.stamp,field.header.fream_if,field.status,field.status.service,field.latitude,field.longitude,field.altitude,";
-    std::cout << "position_convariance[0],positioon_convariance[1],positioon_convariance[2],positioon_convariance[3],positioon_convariance[4],positioon_convariance[5],positioon_convariance[6],positioon_convariance[7],positioon_convariance[8],position_covariance_type" << std::endl;
-    BOOST_FOREACH(rosbag::MessageInstance const m,view)
+    std::cout << "time,field.header.seq,field.header.stamp,field.header.frame_id,field.status,field.status.service,field.latitude,field.longitude,field.altitude,";
+    for(int i=0;i<9;i++)
     {
-        if(m.getTopic() == fix)
+        std::cout << "position_covariance" << i << ",";
+    }
+    std::cout << "position_covariance_type" << std::endl;
+    
+    BOOST_FOREACH (rosbag::MessageInstance const m, view)
+    {
+        if (m.getTopic() == fix)
         {
             sensor_msgs::NavSatFix::ConstPtr msg = m.instantiate<sensor_msgs::NavSatFix>();
+            std::cout << msg->header.stamp << ",";
             std::cout << msg->header.seq << ",";
             std::cout << msg->header.stamp << ",";
             std::cout << msg->header.frame_id << ",";
             std::cout << (int)msg->status.status << ",";
             std::cout << msg->status.service << ",";
-            
-            printf("%lf,",msg->latitude);
-            printf("%lf,",(float)msg->longitude);
-            printf("%lf,",msg->altitude);
-            
-            //std::cout << msg->latitude << std::endl;
-            /*std::cout << (float)msg->longitude << ",";
-            std::cout << (float)msg->altitude << ",";*/
+
+            printf("%0.10f,", msg->latitude);
+            //緯度
+            printf("%0.10f,", msg->longitude);
+            //経度
+            printf("%0.10f,", msg->altitude);
+            //高度
             std::cout << msg->position_covariance[0] << ",";
             std::cout << msg->position_covariance[1] << ",";
             std::cout << msg->position_covariance[2] << ",";
@@ -52,7 +57,28 @@ int main()
             std::cout << msg->position_covariance[6] << ",";
             std::cout << msg->position_covariance[7] << ",";
             std::cout << msg->position_covariance[8] << ",";
-            std::cout << (uint)msg->position_covariance_type << std::endl;////////出力できていない
+            std::cout << (uint)msg->position_covariance_type << std::endl; 
+            
+            /*
+            std::cout << msg->header.seq << " ";
+            std::cout << msg->header.stamp << " ";
+            std::cout << msg->header.frame_id << " ";
+            std::cout << (int)msg->status.status << " ";
+            std::cout << msg->status.service << " ";
+            printf("%0.10f\t", msg->latitude);
+            printf("%0.10f\t", msg->longitude);
+            printf("%0.10f\t", msg->altitude);
+            std::cout << msg->position_covariance[0] << " ";
+            std::cout << msg->position_covariance[1] << " ";
+            std::cout << msg->position_covariance[2] << " ";
+            std::cout << msg->position_covariance[3] << " ";
+            std::cout << msg->position_covariance[4] << " ";
+            std::cout << msg->position_covariance[5] << " ";
+            std::cout << msg->position_covariance[6] << " ";
+            std::cout << msg->position_covariance[7] << " ";
+            std::cout << msg->position_covariance[8] << " ";
+            std::cout << (uint)msg->position_covariance_type << std::endl;
+            */
         }
     }
 
