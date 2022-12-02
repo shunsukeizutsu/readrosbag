@@ -14,7 +14,7 @@
 int main()
 {
     rosbag::Bag bag;
-    bag.open("/home/haselab15/rosbag/2022-08-19-16-24-42.bag", rosbag::bagmode::Read);
+    bag.open("/home/haselab15/rosbag/2022-08-19-16-07-21.bag", rosbag::bagmode::Read);
 
     std::string fix = "/fix";
 
@@ -23,12 +23,12 @@ int main()
 
     rosbag::View view(bag, rosbag::TopicQuery(topics));
 
-    std::cout << "time,field.header.seq,field.header.stamp,field.header.frame_id,field.status,field.status.service,field.latitude,field.longitude,field.altitude,";
+    std::cout << "%time,field.header.seq,field.header.stamp,field.header.frame_id,field.status.status,field.status.service,field.latitude,field.longitude,field.altitude,";
     for(int i=0;i<9;i++)
     {
-        std::cout << "position_covariance" << i << ",";
+        std::cout << "field.position_covariance" << i << ",";
     }
-    std::cout << "position_covariance_type" << std::endl;
+    std::cout << "field.position_covariance_type" << std::endl;
     
     BOOST_FOREACH (rosbag::MessageInstance const m, view)
     {

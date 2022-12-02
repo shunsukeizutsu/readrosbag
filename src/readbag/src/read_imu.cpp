@@ -23,20 +23,20 @@ int main()
 
     rosbag::View view(bag, rosbag::TopicQuery(topics));
 
-    std::cout << "header.seq,header.stamp,header.frame_id,orientation.x,orientation.y,orientation.z,orientation.w,";
+    std::cout << "%time,field.header.seq,field.header.stamp,field.header.frame_id,field.orientation.x,field.orientation.y,field.orientation.z,field.orientation.w,";
     for (int i = 0; i < 9; i++)
     {
-        std::cout << "orientation_covariance" << i << ",";
+        std::cout << "field.orientation_covariance" << i << ",";
     }
-    std::cout << "angular_velocity.x,angular_velocity.y,angular_velocity.z,";
+    std::cout << "field.angular_velocity.x,field.angular_velocity.y,field.angular_velocity.z,";
     for (int j = 0; j < 9; j++)
     {
-        std::cout << "angular_velocity_convariance" << j << ",";
+        std::cout << "field.angular_velocity_convariance" << j << ",";
     }
-    std::cout << "linear_acceleration.x,linear_acceleration.y,linear_acceleration.z,";
+    std::cout << "field.linear_acceleration.x,field.linear_acceleration.y,field.linear_acceleration.z,";
     for (int i = 0; i < 9; i++)
     {
-        std::cout << "linear_acceleration_covariance" << i << ",";
+        std::cout << "field.linear_acceleration_covariance" << i << ",";
     }
     std::cout << std::endl;
 
@@ -45,6 +45,7 @@ int main()
         if (m.getTopic() == imu)
         {
             sensor_msgs::Imu::ConstPtr msg = m.instantiate<sensor_msgs::Imu>();
+            std::cout << msg->header.stamp << ",";
             std::cout << msg->header.seq << ",";
             std::cout << msg->header.stamp << ",";
             std::cout << msg->header.frame_id << ",";

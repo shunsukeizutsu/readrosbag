@@ -14,7 +14,7 @@ int main()
 
   std::string velodyne = "/velodyne_points";
 
-  std::cout << "time,field.header.seq,field.header.stamp,field.header.fream_id,field.height,field.width,";
+  std::cout << "%time,field.header.seq,field.header.stamp,field.header.fream_id,field.height,field.width,";
   for(int i=0;i<6;i++)
   {
     std::cout << "field.field" << i << ".name,";

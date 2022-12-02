@@ -4,5 +4,6 @@
     ],
     "files.associations": {
         "ostream": "cpp"
-    }
+    },
+    "ros.distro": "noetic"
 }
