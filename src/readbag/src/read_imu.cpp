@@ -14,7 +14,7 @@
 int main()
 {
     rosbag::Bag bag;
-    bag.open("/home/haselab15/rosbag/2022-08-19-16-07-21.bag", rosbag::bagmode::Read);
+    bag.open("/home/shunsuke/rosbag/imu/2022-12-02-15-42-13.bag", rosbag::bagmode::Read);
 
     std::string imu = "/imu/data_raw";
 
