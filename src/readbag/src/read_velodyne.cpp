@@ -5,7 +5,7 @@
 #include "std_msgs/String.h"
 #include <boost/foreach.hpp>
 #include "sensor_msgs/PointCloud2.h"
-#include "velodyne_msgs/VelodyneScan.h"
+//#include "velodyne_msgs/VelodyneScan.h"
 
 int main()
 {
