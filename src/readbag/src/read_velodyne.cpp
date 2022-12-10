@@ -10,32 +10,30 @@
 int main()
 {
   rosbag::Bag bag;
-  bag.open("/home/haselab15/rosbag/2022-08-19-16-07-21.bag", rosbag::bagmode::Read);
+  bag.open("/home/haselab15/rosbag/toyosu_park/2022-12-02-15-57-33.bag", rosbag::bagmode::Read);
 
   std::string velodyne = "/velodyne_points";
 
-  std::cout << "%time,field.header.seq,field.header.stamp,field.header.fream_id,field.height,field.width,";
-  for(int i=0;i<6;i++)
+  //////////////////一行目、列の名前//////////////////////////////////////
+  std::cout << "%time,field.header.seq,field.header.stamp,field.header.frame_id,field.height,field.width,";
+  for (int i = 0; i < 6; i++)
   {
-    std::cout << "field.field" << i << ".name,";
-    std::cout << "field.field" << i << ".offset,";
-    std::cout << "field.field" << i << ".datatype,";
-    std::cout << "field.field" << i << ".count,";
+    std::cout << "field.fields" << i << ".name,";
+    std::cout << "field.fields" << i << ".offset,";
+    std::cout << "field.fields" << i << ".datatype,";
+    std::cout << "field.fields" << i << ".count,";
   }
   std::cout << "field.is_bigendian,";
   std::cout << "field.point_step,";
   std::cout << "field.row_step,";
-  for(int i=0;i<1206;i++)
-  { 
+  for (int i = 0; i < 200000; i++)
+  {
     std::cout << "field.data" << i << ",";
-    if(i==1205)
+    if (i == 200000 - 1)
     {
       std::cout << std::endl;
     }
   }
-
-
-
   std::vector<std::string> topics;
   topics.push_back(std::string(velodyne));
 
@@ -46,6 +44,7 @@ int main()
     if (m.getTopic() == velodyne)
     {
       sensor_msgs::PointCloud2::ConstPtr msg = m.instantiate<sensor_msgs::PointCloud2>();
+
       std::cout << msg->header.stamp << ",";
       std::cout << msg->header.seq << ",";
       std::cout << msg->header.stamp << ",";
@@ -72,57 +71,15 @@ int main()
       std::cout << (bool)msg->is_bigendian << ",";
       std::cout << msg->point_step << ",";
       std::cout << msg->row_step << ",";
-      // data[1206]
-      for (int i = 0; i < 1206; i++)
+      
+      // data_size = width*point_step
+      int total_size = msg->width * msg->point_step;
+      //std::cout << total_size << std::endl;
+      for (int i = 0; i < total_size; i++)
       {
-        if (i != 1205)
-        {
-          std::cout << (uint)msg->data[i] << ",";
-        }
-        else
-        {
-          std::cout << (uint)msg->data[i] << std::endl;
-        }
-/*
-      std::cout << msg->header.seq << " ";
-      std::cout << msg->header.stamp << " ";
-      std::cout << msg->header.frame_id << " ";
-      std::cout << msg->height << " ";
-      std::cout << msg->width << " ";
-
-      for (size_t i = 0; i < msg->fields.size(); i++)
-      {
-        if (msg->fields[i].datatype == sensor_msgs::PointField::FLOAT32)
-        {
-          std::cout << msg->fields[i].name << " ";
-          std::cout << msg->fields[i].offset << " ";
-          std::cout << (uint)msg->fields[i].datatype << " ";
-          std::cout << msg->fields[i].count << " ";
-        }
-        else if (msg->fields[i].datatype == sensor_msgs::PointField::UINT16)
-        {
-          std::cout << msg->fields[i].name << " ";
-          std::cout << msg->fields[i].offset << " ";
-          std::cout << (uint)msg->fields[i].datatype << " ";
-          std::cout << msg->fields[i].count << " ";
-        }
+        std::cout << (uint)msg->data[i] << ",";
       }
-      std::cout << (bool)msg->is_bigendian << " ";
-      std::cout << msg->point_step << " ";
-      std::cout << msg->row_step << " ";
-      // data[1206]
-      for (int i = 0; i < 1206; i++)
-      {
-        if (i != 1205)
-        {
-          std::cout << (uint)msg->data[i] << " ";
-        }
-        else
-        {
-          std::cout << (uint)msg->data[i] << std::endl;
-        }
-*/
-      }
+      std::cout << (bool)msg->is_dense << std::endl;
     }
   }
 

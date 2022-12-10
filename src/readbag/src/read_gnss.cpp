@@ -1,7 +1,6 @@
 #include <ros/ros.h>
 #include <rosbag/bag.h>
 #include <rosbag/view.h>
-#include <ros/time.h>
 #include <vector>
 #include "std_msgs/String.h"
 #include <boost/foreach.hpp>
@@ -15,7 +14,7 @@
 int main()
 {
     rosbag::Bag bag;
-    bag.open("/home/shunsuke/rosbag/2022-12-02-15-42-12.bag", rosbag::bagmode::Read);
+    bag.open("/home/haselab15/rosbag/toyosu_park/2022-12-02-15-57-33.bag", rosbag::bagmode::Read);
 
     std::string fix = "/fix";
 
@@ -36,7 +35,7 @@ int main()
         if (m.getTopic() == fix)
         {
             sensor_msgs::NavSatFix::ConstPtr msg = m.instantiate<sensor_msgs::NavSatFix>();
-            std::cout << msg->header.stamp.sec << ",";
+            std::cout << msg->header.stamp << ",";
             std::cout << msg->header.seq << ",";
             std::cout << msg->header.stamp << ",";
             std::cout << msg->header.frame_id << ",";
@@ -47,7 +46,7 @@ int main()
             //緯度
             printf("%0.10f,", msg->longitude);
             //経度
-            printf("%f,", msg->altitude);
+            printf("%0.10f,", msg->altitude);
             //高度
             std::cout << msg->position_covariance[0] << ",";
             std::cout << msg->position_covariance[1] << ",";

@@ -13,8 +13,8 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   sensor_msgs
-  roslint
-  velodyne_msgs
+##  roslint
+##  velodyne_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -215,3 +215,5 @@ add_executable(read_vel src/read_velodyne.cpp)
 target_link_libraries(read_vel ${catkin_LIBRARIES})
 add_executable(read_imu src/read_imu.cpp)
 target_link_libraries(read_imu ${catkin_LIBRARIES})
+#add_executable(time src/timestamp.cpp)
+#target_link_libraries(time ${catkin_LIBRARIES})
