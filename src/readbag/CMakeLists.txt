@@ -215,5 +215,8 @@ add_executable(read_vel src/read_velodyne.cpp)
 target_link_libraries(read_vel ${catkin_LIBRARIES})
 add_executable(read_imu src/read_imu.cpp)
 target_link_libraries(read_imu ${catkin_LIBRARIES})
+add_executable(read_camera src/read_camera.cpp)
+target_link_libraries(read_camera ${catkin_LIBRARIES})
+
 #add_executable(time src/timestamp.cpp)
 #target_link_libraries(time ${catkin_LIBRARIES})
