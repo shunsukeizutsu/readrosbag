@@ -12,7 +12,7 @@
 int main()
 {
     rosbag::Bag bag;
-    bag.open("/home/shunsuke/rosbag/2022-08-19-16-07-21.bag", rosbag::bagmode::Read);
+    bag.open("/home/haselab15/rosbag/2022-08-19-16-35-17.bag", rosbag::bagmode::Read);
 
     std::string camera = "/usb_cam/image_raw";
 
@@ -25,7 +25,7 @@ int main()
     std::cout << "field.height,field.width,field.encoding,field.is_bigendian,field.step,";
     for(int i=0;i<921600;i++)
     {
-        std::cout << "data" << i << ",";
+        std::cout << "field.data" << i << ",";
     }
     std::cout << std::endl;
 

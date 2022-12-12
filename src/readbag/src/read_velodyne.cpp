@@ -10,7 +10,7 @@
 int main()
 {
   rosbag::Bag bag;
-  bag.open("/home/haselab15/rosbag/toyosu_park/2022-12-02-15-57-33.bag", rosbag::bagmode::Read);
+  bag.open("/home/haselab15/rosbag/2022-08-19-16-35-17.bag", rosbag::bagmode::Read);
 
   std::string velodyne = "/velodyne_points";
 
