@@ -13,8 +13,8 @@
 
 int main()
 {
-    rosbag::Bag bag;
-    bag.open("/home/haselab15/rosbag/toyosu_park/2022-12-02-15-57-33.bag", rosbag::bagmode::Read);
+    rosbag::Bag bag("/home/shunsukeizutsu/12_02_toyosu/2022-12-02-15-57-33.bag", rosbag::bagmode::Read);
+//    bag.open("/home/shunsukeizutsu/12_02_toyosu/2022-12-02-15-57-33.bag", rosbag::bagmode::Read);
 
     std::string fix = "/fix";
 
@@ -48,37 +48,12 @@ int main()
             //経度
             printf("%0.10f,", msg->altitude);
             //高度
-            std::cout << msg->position_covariance[0] << ",";
-            std::cout << msg->position_covariance[1] << ",";
-            std::cout << msg->position_covariance[2] << ",";
-            std::cout << msg->position_covariance[3] << ",";
-            std::cout << msg->position_covariance[4] << ",";
-            std::cout << msg->position_covariance[5] << ",";
-            std::cout << msg->position_covariance[6] << ",";
-            std::cout << msg->position_covariance[7] << ",";
-            std::cout << msg->position_covariance[8] << ",";
+
+            for(int i=0;i<9;i++)
+            {
+                std::cout << msg->position_covariance[i] << ",";
+            }
             std::cout << (uint)msg->position_covariance_type << std::endl; 
-            
-            /*
-            std::cout << msg->header.seq << " ";
-            std::cout << msg->header.stamp << " ";
-            std::cout << msg->header.frame_id << " ";
-            std::cout << (int)msg->status.status << " ";
-            std::cout << msg->status.service << " ";
-            printf("%0.10f\t", msg->latitude);
-            printf("%0.10f\t", msg->longitude);
-            printf("%0.10f\t", msg->altitude);
-            std::cout << msg->position_covariance[0] << " ";
-            std::cout << msg->position_covariance[1] << " ";
-            std::cout << msg->position_covariance[2] << " ";
-            std::cout << msg->position_covariance[3] << " ";
-            std::cout << msg->position_covariance[4] << " ";
-            std::cout << msg->position_covariance[5] << " ";
-            std::cout << msg->position_covariance[6] << " ";
-            std::cout << msg->position_covariance[7] << " ";
-            std::cout << msg->position_covariance[8] << " ";
-            std::cout << (uint)msg->position_covariance_type << std::endl;
-            */
         }
     }
 

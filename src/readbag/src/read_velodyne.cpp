@@ -10,12 +10,12 @@
 int main()
 {
   rosbag::Bag bag;
-  bag.open("/home/haselab15/rosbag/toyosu_park/2022-12-02-15-57-33.bag", rosbag::bagmode::Read);
+  bag.open("/home/shunsukeizutsu/12_02_toyosu/2022-12-02-15-57-33.bag", rosbag::bagmode::Read);
 
   std::string velodyne = "/velodyne_points";
 
   //////////////////一行目、列の名前//////////////////////////////////////
-  /*std::cout << "%time,field.header.seq,field.header.stamp,field.header.frame_id,field.height,field.width,";
+  std::cout << "%time,field.header.seq,field.header.stamp,field.header.frame_id,field.height,field.width,";
   for (int i = 0; i < 6; i++)
   {
     std::cout << "field.fields" << i << ".name,";
@@ -33,7 +33,7 @@ int main()
     {
       std::cout << std::endl;
     }
-  }*/
+  }
   std::vector<std::string> topics;
   topics.push_back(std::string(velodyne));
 
@@ -45,7 +45,7 @@ int main()
     {
       sensor_msgs::PointCloud2::ConstPtr msg = m.instantiate<sensor_msgs::PointCloud2>();
 
-      /*std::cout << msg->header.stamp << ",";
+      std::cout << msg->header.stamp << ",";
       std::cout << msg->header.seq << ",";
       std::cout << msg->header.stamp << ",";
       std::cout << msg->header.frame_id << ",";
@@ -72,16 +72,16 @@ int main()
       std::cout << (bool)msg->is_bigendian << ",";
       std::cout << msg->point_step << ",";
       std::cout << msg->row_step << ",";
-      */
+      
       // data_size = width*point_step
       int total_size = msg->width * msg->point_step;
-      std::cout << total_size << std::endl;
-      /*for (int i = 0; i < total_size; i++)
+//      std::cout << total_size << std::endl;
+      for (int i = 0; i < total_size; i++)
       {
         std::cout << (uint)msg->data[i] << ",";
       }
       std::cout << (bool)msg->is_dense << std::endl;
-      */
+      
     }
   }
 
