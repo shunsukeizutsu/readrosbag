@@ -1,10 +1,9 @@
-#include <ros/ros.h>
+// #include <ros/ros.h>
 #include <rosbag/bag.h>
 #include <rosbag/view.h>
 #include <vector>
 #include <boost/foreach.hpp>
 #include "sensor_msgs/Imu.h"
-
 
 int main()
 {
@@ -37,10 +36,12 @@ int main()
 
     BOOST_FOREACH (rosbag::MessageInstance const m, view)
     {
+//        std::cout << m.getTopic() << std::endl;
         if (m.getTopic() == imu)
         {
+            std::cout << m.getTime() << ",";
             sensor_msgs::Imu::ConstPtr msg = m.instantiate<sensor_msgs::Imu>();
-            std::cout << msg->header.stamp << ",";
+//            std::cout << msg->header.stamp << ",";
             std::cout << msg->header.seq << ",";
             std::cout << msg->header.stamp << ",";
             std::cout << msg->header.frame_id << ",";
@@ -67,7 +68,7 @@ int main()
                 printf("%0.12f,",(double)msg->linear_acceleration_covariance[i]);
             }
             printf("\n");
-        }
+    }
     }
     bag.close();
     return 0;
