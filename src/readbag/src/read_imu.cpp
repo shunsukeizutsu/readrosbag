@@ -14,7 +14,11 @@
 int main()
 {
     rosbag::Bag bag;
+<<<<<<< HEAD
     bag.open("/home/haselab15/rosbag/210601_0858/2021-06-01-08-58-07.bag", rosbag::bagmode::Read);
+=======
+    bag.open("/home/shunsukeizutsu/12_02_toyosu/2022-12-02-15-57-35.bag", rosbag::bagmode::Read);
+>>>>>>> d10f39d31127be53c67249e31bb5577a87771995
 
     std::string imu = "/imu/data_raw";
 
@@ -58,6 +62,7 @@ int main()
             {
                 printf("%lf,",(double)msg->orientation_covariance[i]);//covariance共分散
             }
+
             //角速度
             printf("%0.16f,%0.16f,%0.16f,",msg->angular_velocity.x,msg->angular_velocity.y,msg->angular_velocity.z);
             for (int i = 0; i < 9; i++)
@@ -70,41 +75,6 @@ int main()
             {
                 printf("%0.12f,",(double)msg->linear_acceleration_covariance[i]);
             }
-            /*std::cout << msg->orientation_covariance[0] << ",";
-            std::cout << msg->orientation_covariance[1] << ",";
-            std::cout << msg->orientation_covariance[2] << ",";
-            std::cout << msg->orientation_covariance[3] << ",";
-            std::cout << msg->orientation_covariance[4] << ",";
-            std::cout << msg->orientation_covariance[5] << ",";
-            std::cout << msg->orientation_covariance[6] << ",";
-            std::cout << msg->orientation_covariance[7] << ",";
-            std::cout << msg->orientation_covariance[8] << ",";*/
-            /*
-            std::cout << msg->angular_velocity.x << ",";
-            std::cout << msg->angular_velocity.y << ",";
-            std::cout << msg->angular_velocity.z << ",";*/
-            /*std::cout << msg->angular_velocity_covariance[0] << ",";
-            std::cout << msg->angular_velocity_covariance[1] << ",";
-            std::cout << msg->angular_velocity_covariance[2] << ",";
-            std::cout << msg->angular_velocity_covariance[3] << ",";
-            std::cout << msg->angular_velocity_covariance[4] << ",";
-            std::cout << msg->angular_velocity_covariance[5] << ",";
-            std::cout << msg->angular_velocity_covariance[6] << ",";
-            std::cout << msg->angular_velocity_covariance[7] << ",";
-            std::cout << msg->angular_velocity_covariance[8] << ",";
-            std::cout << msg->linear_acceleration.x << ",";
-            std::cout << msg->linear_acceleration.y << ",";
-            std::cout << msg->linear_acceleration.z << ",";
-            */
-            /*std::cout << msg->linear_acceleration_covariance[0] << ",";
-            std::cout << msg->linear_acceleration_covariance[1] << ",";
-            std::cout << msg->linear_acceleration_covariance[2] << ",";
-            std::cout << msg->linear_acceleration_covariance[3] << ",";
-            std::cout << msg->linear_acceleration_covariance[4] << ",";
-            std::cout << msg->linear_acceleration_covariance[5] << ",";
-            std::cout << msg->linear_acceleration_covariance[6] << ",";
-            std::cout << msg->linear_acceleration_covariance[7] << ",";
-            std::cout << msg->linear_acceleration_covariance[8] << std::endl;*/
             printf("\n");
         }
     }

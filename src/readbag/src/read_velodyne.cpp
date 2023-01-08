@@ -10,7 +10,11 @@
 int main()
 {
   rosbag::Bag bag;
+<<<<<<< HEAD
   bag.open("/home/haselab15/rosbag/210601_0858/2021-06-01-08-58-07.bag", rosbag::bagmode::Read);
+=======
+  bag.open("/home/shunsukeizutsu/12_02_toyosu/2022-12-02-15-57-33.bag", rosbag::bagmode::Read);
+>>>>>>> d10f39d31127be53c67249e31bb5577a87771995
 
   std::string velodyne = "/velodyne_points";
 
@@ -75,6 +79,10 @@ int main()
       
       // data_size = width*point_step
       int total_size = msg->width * msg->point_step;
+<<<<<<< HEAD
+=======
+//      std::cout << total_size << std::endl;
+>>>>>>> d10f39d31127be53c67249e31bb5577a87771995
       for (int i = 0; i < total_size; i++)
       {
         std::cout << (uint)msg->data[i] << ",";
