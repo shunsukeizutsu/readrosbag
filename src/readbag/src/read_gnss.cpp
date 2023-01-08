@@ -14,7 +14,7 @@
 int main()
 {
     rosbag::Bag bag;
-    bag.open("/home/haselab15/rosbag/toyosu_park/2022-12-02-15-57-33.bag", rosbag::bagmode::Read);
+    bag.open("/home/haselab15/rosbag/210601_0858/2021-06-01-08-58-07.bag", rosbag::bagmode::Read);
 
     std::string fix = "/fix";
 
