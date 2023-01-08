@@ -2,14 +2,9 @@
 #include <rosbag/bag.h>
 #include <rosbag/view.h>
 #include <vector>
-#include "std_msgs/String.h"
 #include <boost/foreach.hpp>
 #include "sensor_msgs/Imu.h"
-#include "sensor_msgs/NavSatFix.h"
-#include "sensor_msgs/NavSatStatus.h"
-#include <stdint.h>
-#include <stdio.h>
-#include <cstdint>
+
 
 int main()
 {

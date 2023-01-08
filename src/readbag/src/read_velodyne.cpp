@@ -75,10 +75,6 @@ int main()
       
       // data_size = width*point_step
       int total_size = msg->width * msg->point_step;
-<<<<<<< HEAD
-=======
-//      std::cout << total_size << std::endl;
->>>>>>> d10f39d31127be53c67249e31bb5577a87771995
       for (int i = 0; i < total_size; i++)
       {
         std::cout << (uint)msg->data[i] << ",";
