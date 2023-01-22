@@ -43,9 +43,10 @@ int main()
   {
     if (m.getTopic() == velodyne)
     {
+      std::cout << m.getTime() << ",";
       sensor_msgs::PointCloud2::ConstPtr msg = m.instantiate<sensor_msgs::PointCloud2>();
 
-      std::cout << msg->header.stamp << ",";
+//      std::cout << msg->header.stamp << ",";
       std::cout << msg->header.seq << ",";
       std::cout << msg->header.stamp << ",";
       std::cout << msg->header.frame_id << ",";

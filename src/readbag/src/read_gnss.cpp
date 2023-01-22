@@ -34,8 +34,9 @@ int main()
     {
         if (m.getTopic() == fix)
         {
+            std::cout << m.getTime() << ",";
             sensor_msgs::NavSatFix::ConstPtr msg = m.instantiate<sensor_msgs::NavSatFix>();
-            std::cout << msg->header.stamp << ",";
+//            std::cout << msg->header.stamp << ",";
             std::cout << msg->header.seq << ",";
             std::cout << msg->header.stamp << ",";
             std::cout << msg->header.frame_id << ",";
