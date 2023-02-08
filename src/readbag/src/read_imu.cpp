@@ -1,4 +1,3 @@
-// #include <ros/ros.h>
 #include <rosbag/bag.h>
 #include <rosbag/view.h>
 #include <vector>
@@ -7,8 +6,10 @@
 
 int main()
 {
+
+    
     rosbag::Bag bag;
-    bag.open("/home/haselab15/rosbag/210601_0858/2021-06-01-08-58-07.bag", rosbag::bagmode::Read);
+    bag.open("/home/haselab15/rosbag/2022-12-02_toyosu/2022-12-02-15-57-35.bag", rosbag::bagmode::Read);
 
     std::string imu = "/imu/data_raw";
 
@@ -36,12 +37,10 @@ int main()
 
     BOOST_FOREACH (rosbag::MessageInstance const m, view)
     {
-//        std::cout << m.getTopic() << std::endl;
         if (m.getTopic() == imu)
         {
             std::cout << m.getTime() << ",";
             sensor_msgs::Imu::ConstPtr msg = m.instantiate<sensor_msgs::Imu>();
-//            std::cout << msg->header.stamp << ",";
             std::cout << msg->header.seq << ",";
             std::cout << msg->header.stamp << ",";
             std::cout << msg->header.frame_id << ",";
@@ -52,23 +51,23 @@ int main()
 
             for (int i = 0; i < 9; i++)
             {
-                printf("%lf,",(double)msg->orientation_covariance[i]);//covariance共分散
+                printf("%lf,", (double)msg->orientation_covariance[i]); // covariance共分散
             }
 
-            //角速度
-            printf("%0.16f,%0.16f,%0.16f,",msg->angular_velocity.x,msg->angular_velocity.y,msg->angular_velocity.z);
+            // 角速度
+            printf("%0.16f,%0.16f,%0.16f,", msg->angular_velocity.x, msg->angular_velocity.y, msg->angular_velocity.z);
             for (int i = 0; i < 9; i++)
             {
-                printf("%0.16f,",msg->angular_velocity_covariance[i]);
+                printf("%0.16f,", msg->angular_velocity_covariance[i]);
             }
-            //加速度
-            printf("%0.14f,%0.14f,%0.14f,",msg->linear_acceleration.x,msg->linear_acceleration.y,msg->linear_acceleration.z);
+            // 加速度
+            printf("%0.14f,%0.14f,%0.14f,", msg->linear_acceleration.x, msg->linear_acceleration.y, msg->linear_acceleration.z);
             for (int i = 0; i < 9; i++)
             {
-                printf("%0.12f,",(double)msg->linear_acceleration_covariance[i]);
+                printf("%0.12f,", (double)msg->linear_acceleration_covariance[i]);
             }
             printf("\n");
-    }
+        }
     }
     bag.close();
     return 0;

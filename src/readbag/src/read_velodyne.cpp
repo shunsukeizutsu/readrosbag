@@ -5,12 +5,11 @@
 #include "std_msgs/String.h"
 #include <boost/foreach.hpp>
 #include "sensor_msgs/PointCloud2.h"
-//#include "velodyne_msgs/VelodyneScan.h"
 
 int main()
 {
   rosbag::Bag bag;
-  bag.open("/home/haselab15/rosbag/210601_0858/2021-06-01-08-58-07.bag", rosbag::bagmode::Read);
+  bag.open("/home/haselab15/rosbag/2022-12-02_toyosu/2022-12-02-15-57-33.bag", rosbag::bagmode::Read);
 
   std::string velodyne = "/velodyne_points";
 
@@ -43,10 +42,8 @@ int main()
   {
     if (m.getTopic() == velodyne)
     {
-      std::cout << m.getTime() << ",";
       sensor_msgs::PointCloud2::ConstPtr msg = m.instantiate<sensor_msgs::PointCloud2>();
-
-//      std::cout << msg->header.stamp << ",";
+      std::cout << m.getTime() << ",";
       std::cout << msg->header.seq << ",";
       std::cout << msg->header.stamp << ",";
       std::cout << msg->header.frame_id << ",";
@@ -69,11 +66,11 @@ int main()
           std::cout << msg->fields[i].count << ",";
         }
       }
-      
+
       std::cout << (bool)msg->is_bigendian << ",";
       std::cout << msg->point_step << ",";
       std::cout << msg->row_step << ",";
-      
+
       // data_size = width*point_step
       int total_size = msg->width * msg->point_step;
       for (int i = 0; i < total_size; i++)
@@ -81,7 +78,6 @@ int main()
         std::cout << (uint)msg->data[i] << ",";
       }
       std::cout << (bool)msg->is_dense << std::endl;
-      
     }
   }
 

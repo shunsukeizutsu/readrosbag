@@ -13,6 +13,8 @@ int main()
   bag.open("/home/haselab15/rosbag/toyosu_park/2022-12-02-15-57-33.bag", rosbag::bagmode::Read);
 
   std::string velodyne = "/velodyne_points";
+  std::string imu = "/imu/data_raw";
+  std::string fix = "/fix";
 
   //////////////////一行目、列の名前//////////////////////////////////////
   std::cout << "field.header.stamp" << std::endl;
@@ -20,6 +22,8 @@ int main()
   
   std::vector<std::string> topics;
   topics.push_back(std::string(velodyne));
+  topics.push_back(std::string(imu));
+  topics.push_back(std::string(fix));
 
   rosbag::View view(bag, rosbag::TopicQuery(topics));
 
@@ -28,11 +32,7 @@ int main()
     if (m.getTopic() == velodyne)
     {
       sensor_msgs::PointCloud2::ConstPtr msg = m.instantiate<sensor_msgs::PointCloud2>();
-
-     
       std::cout << msg->header.stamp << std::endl;
-      
-    
     }
   }
 
