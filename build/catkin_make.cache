@@ -1,0 +1,2 @@
+readbag
+-DCATKIN_DEVEL_PREFIX=/home/shun330/readrosbag/devel -DCMAKE_INSTALL_PREFIX=/home/shun330/readrosbag/install -G Unix Makefiles

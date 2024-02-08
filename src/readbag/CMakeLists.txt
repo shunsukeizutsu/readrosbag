@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(readbag)
+project(readbag CXX)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -122,6 +122,7 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ./utility
 )
 
 ## Declare a C++ library
@@ -220,3 +221,4 @@ target_link_libraries(read_camera ${catkin_LIBRARIES})
 
 #add_executable(time src/timestamp.cpp)
 #target_link_libraries(time ${catkin_LIBRARIES})
+
