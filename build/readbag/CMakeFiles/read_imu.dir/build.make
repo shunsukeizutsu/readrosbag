@@ -70,14 +70,44 @@ readbag/CMakeFiles/read_imu.dir/src/read_imu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/read_imu.dir/src/read_imu.cpp.s"
 	cd /home/shun330/readrosbag/build/readbag && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shun330/readrosbag/src/readbag/src/read_imu.cpp -o CMakeFiles/read_imu.dir/src/read_imu.cpp.s
 
+readbag/CMakeFiles/read_imu.dir/src/bag2txt.cpp.o: readbag/CMakeFiles/read_imu.dir/flags.make
+readbag/CMakeFiles/read_imu.dir/src/bag2txt.cpp.o: /home/shun330/readrosbag/src/readbag/src/bag2txt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shun330/readrosbag/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object readbag/CMakeFiles/read_imu.dir/src/bag2txt.cpp.o"
+	cd /home/shun330/readrosbag/build/readbag && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/read_imu.dir/src/bag2txt.cpp.o -c /home/shun330/readrosbag/src/readbag/src/bag2txt.cpp
+
+readbag/CMakeFiles/read_imu.dir/src/bag2txt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/read_imu.dir/src/bag2txt.cpp.i"
+	cd /home/shun330/readrosbag/build/readbag && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shun330/readrosbag/src/readbag/src/bag2txt.cpp > CMakeFiles/read_imu.dir/src/bag2txt.cpp.i
+
+readbag/CMakeFiles/read_imu.dir/src/bag2txt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/read_imu.dir/src/bag2txt.cpp.s"
+	cd /home/shun330/readrosbag/build/readbag && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shun330/readrosbag/src/readbag/src/bag2txt.cpp -o CMakeFiles/read_imu.dir/src/bag2txt.cpp.s
+
+readbag/CMakeFiles/read_imu.dir/src/utility.cpp.o: readbag/CMakeFiles/read_imu.dir/flags.make
+readbag/CMakeFiles/read_imu.dir/src/utility.cpp.o: /home/shun330/readrosbag/src/readbag/src/utility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shun330/readrosbag/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object readbag/CMakeFiles/read_imu.dir/src/utility.cpp.o"
+	cd /home/shun330/readrosbag/build/readbag && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/read_imu.dir/src/utility.cpp.o -c /home/shun330/readrosbag/src/readbag/src/utility.cpp
+
+readbag/CMakeFiles/read_imu.dir/src/utility.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/read_imu.dir/src/utility.cpp.i"
+	cd /home/shun330/readrosbag/build/readbag && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shun330/readrosbag/src/readbag/src/utility.cpp > CMakeFiles/read_imu.dir/src/utility.cpp.i
+
+readbag/CMakeFiles/read_imu.dir/src/utility.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/read_imu.dir/src/utility.cpp.s"
+	cd /home/shun330/readrosbag/build/readbag && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shun330/readrosbag/src/readbag/src/utility.cpp -o CMakeFiles/read_imu.dir/src/utility.cpp.s
+
 # Object files for target read_imu
 read_imu_OBJECTS = \
-"CMakeFiles/read_imu.dir/src/read_imu.cpp.o"
+"CMakeFiles/read_imu.dir/src/read_imu.cpp.o" \
+"CMakeFiles/read_imu.dir/src/bag2txt.cpp.o" \
+"CMakeFiles/read_imu.dir/src/utility.cpp.o"
 
 # External object files for target read_imu
 read_imu_EXTERNAL_OBJECTS =
 
 /home/shun330/readrosbag/devel/lib/readbag/read_imu: readbag/CMakeFiles/read_imu.dir/src/read_imu.cpp.o
+/home/shun330/readrosbag/devel/lib/readbag/read_imu: readbag/CMakeFiles/read_imu.dir/src/bag2txt.cpp.o
+/home/shun330/readrosbag/devel/lib/readbag/read_imu: readbag/CMakeFiles/read_imu.dir/src/utility.cpp.o
 /home/shun330/readrosbag/devel/lib/readbag/read_imu: readbag/CMakeFiles/read_imu.dir/build.make
 /home/shun330/readrosbag/devel/lib/readbag/read_imu: /opt/ros/noetic/lib/librosbag.so
 /home/shun330/readrosbag/devel/lib/readbag/read_imu: /opt/ros/noetic/lib/librosbag_storage.so
@@ -110,7 +140,7 @@ read_imu_EXTERNAL_OBJECTS =
 /home/shun330/readrosbag/devel/lib/readbag/read_imu: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /home/shun330/readrosbag/devel/lib/readbag/read_imu: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 /home/shun330/readrosbag/devel/lib/readbag/read_imu: readbag/CMakeFiles/read_imu.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shun330/readrosbag/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/shun330/readrosbag/devel/lib/readbag/read_imu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shun330/readrosbag/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable /home/shun330/readrosbag/devel/lib/readbag/read_imu"
 	cd /home/shun330/readrosbag/build/readbag && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/read_imu.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -3,6 +3,7 @@
 #include <vector>
 #include <boost/foreach.hpp>
 #include "sensor_msgs/Imu.h"
+#include "bag2txt.hpp"
 
 int main()
 {
